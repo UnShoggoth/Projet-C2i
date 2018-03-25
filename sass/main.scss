@@ -1,0 +1,209 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//Variables
+
+$bleu_menu: (rgb(30, 25, 150));
+$bleu_menu1: (rgb(30, 150, 150));
+
+//Polices
+
+@font-face{
+    font-family: Stars;
+    src: url("../helpers/ACROTSRG.TTF")
+}
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway');
+
+//Placeholders
+
+%user-select-none{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+//Mixins
+
+@mixin image($width, $height: auto){
+    width: $width;
+    height: $height;
+    align-self: center;
+    margin: 1em 0;
+}
+
+@mixin placement_corps($taille){
+    margin: 2em 2.5%;
+    flex: 1 1 $taille;
+}
+
+//Layout
+
+header{
+    position: relative;
+    background-image: url("../media/images/backgroundHeader.jpg");
+    padding: 2em 0;
+    font-family: Stars;
+    font-size: 1.5em;
+    text-align: center; 
+    color: $bleu_menu1;
+    text-transform: capitalize;
+    @extend %user-select-none;
+    span{
+        text-transform: none;
+        position: absolute;
+        color: rgb(175, 175, 0);
+        transform: rotate(-25deg);
+        font-size: 1rem;
+        right: 5vw;
+        bottom: 10vh;
+        font-weight: 600;
+    }
+}
+
+#menu_general{
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    @extend %user-select-none;
+    #courrant{
+        background-color: $bleu_menu1;
+        >a{
+            color: #000;
+        }
+    }
+    li{
+        display: inline-block;
+        position: relative;
+        width: 20%;
+        background-color: $bleu_menu;
+        &:hover{
+            background-color: $bleu_menu1;
+        }
+        li{
+            background-color: $bleu_menu;
+            &:hover{
+                background-color: $bleu_menu1;
+            }
+        }
+        &:hover{
+            a{
+                color: #000;
+            }
+            li{
+                a{
+                    color: #FFF;
+                }
+                &:hover a{
+                    color: #000;
+                }
+            }
+            ul{
+                max-height: 20em;
+            }
+        }
+    }
+    ul{
+        position: absolute;
+        z-index: 10;
+        max-height: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        transition: .5s all .1s;
+        li{
+            border-radius: 0;
+            width: 100%;
+            &:last-child{
+                border-radius: 0 0 5px 5px;
+            }
+        }
+        a{
+            padding: 2% 0;
+        }
+    }
+    a{
+        text-decoration: none;
+        display: block;
+        color: #FFF;
+        padding: 1em 0;
+        font-family: Lato, sans-serif;
+    }
+}
+
+.container{
+    background-color: rgb(20, 20, 20);
+    min-height: 100vh;
+    justify-content: space-around;
+    padding-bottom: 5vh;
+    .content{
+        display: flex;
+        flex-flow: wrap;
+        width: 75%;
+        margin: auto;
+        min-height: 100vh;
+        text-align: center;
+        color: white;
+        font-family: Raleway, sans-serif;
+        h1{
+            flex: 1 0 95%;
+            margin: 2em 2.5%;
+            font-family: Stars;
+            font-size: 2em;
+        }
+        .colonne1, .colonne1c{
+            @include placement_corps(95%)
+        }
+        .colonne2, .colonne2c{
+            @include placement_corps(45%)
+        }
+        .colonne3, .colonne3c{
+            @include placement_corps(28.33%)
+        }
+        .colonne4, .colonne4c{
+            @include placement_corps(20%)
+        }
+        .colonne1, .colonne2, .colonne3, .colonne4{
+            text-align: start;
+        }
+        .image100{
+            @include image(100%)
+        }
+        .image75{
+            @include image(75%)
+        }
+        .image66{
+            @include image(66.67%)
+        }
+        .image50{
+            @include image(50%)
+        }
+        .image33{
+            @include image(33.33%)
+        }
+        .image25{
+            @include image(25%)
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    font-family: Raleway, sans-serif;
+    p{
+        font-size: 0.75em;
+        padding: 1em;
+        color: white;
+    }
+}
+
+#remonter img{
+    height: 3em;
+    position: fixed;
+    right: 5vw;
+    bottom: 5vh;
+}

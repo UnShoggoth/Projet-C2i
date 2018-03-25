@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Raleway");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Stars;
+  src: url("../helpers/ACROTSRG.TTF");
+}
+
+header, #menu_general {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+header {
+  position: relative;
+  background-image: url("../media/images/backgroundHeader.jpg");
+  padding: 2em 0;
+  font-family: Stars;
+  font-size: 1.5em;
+  text-align: center;
+  color: #1e9696;
+  text-transform: capitalize;
+}
+
+header span {
+  text-transform: none;
+  position: absolute;
+  color: #afaf00;
+  transform: rotate(-25deg);
+  font-size: 1rem;
+  right: 5vw;
+  bottom: 10vh;
+  font-weight: 600;
+}
+
+#menu_general {
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+
+#menu_general #courrant {
+  background-color: #1e9696;
+}
+
+#menu_general #courrant > a {
+  color: #000;
+}
+
+#menu_general li {
+  display: inline-block;
+  position: relative;
+  width: 20%;
+  background-color: #1e1996;
+}
+
+#menu_general li:hover {
+  background-color: #1e9696;
+}
+
+#menu_general li li {
+  background-color: #1e1996;
+}
+
+#menu_general li li:hover {
+  background-color: #1e9696;
+}
+
+#menu_general li:hover a {
+  color: #000;
+}
+
+#menu_general li:hover li a {
+  color: #FFF;
+}
+
+#menu_general li:hover li:hover a {
+  color: #000;
+}
+
+#menu_general li:hover ul {
+  max-height: 20em;
+}
+
+#menu_general ul {
+  position: absolute;
+  z-index: 10;
+  max-height: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  transition: .5s all .1s;
+}
+
+#menu_general ul li {
+  border-radius: 0;
+  width: 100%;
+}
+
+#menu_general ul li:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+#menu_general ul a {
+  padding: 2% 0;
+}
+
+#menu_general a {
+  text-decoration: none;
+  display: block;
+  color: #FFF;
+  padding: 1em 0;
+  font-family: Lato, sans-serif;
+}
+
+.container {
+  background-color: #141414;
+  min-height: 100vh;
+  justify-content: space-around;
+  padding-bottom: 5vh;
+}
+
+.container .content {
+  display: flex;
+  flex-flow: wrap;
+  width: 75%;
+  margin: auto;
+  min-height: 100vh;
+  text-align: center;
+  color: white;
+  font-family: Raleway, sans-serif;
+}
+
+.container .content h1 {
+  flex: 1 0 95%;
+  margin: 2em 2.5%;
+  font-family: Stars;
+  font-size: 2em;
+}
+
+.container .content .colonne1, .container .content .colonne1c {
+  margin: 2em 2.5%;
+  flex: 1 1 95%;
+}
+
+.container .content .colonne2, .container .content .colonne2c {
+  margin: 2em 2.5%;
+  flex: 1 1 45%;
+}
+
+.container .content .colonne3, .container .content .colonne3c {
+  margin: 2em 2.5%;
+  flex: 1 1 28.33%;
+}
+
+.container .content .colonne4, .container .content .colonne4c {
+  margin: 2em 2.5%;
+  flex: 1 1 20%;
+}
+
+.container .content .colonne1, .container .content .colonne2, .container .content .colonne3, .container .content .colonne4 {
+  text-align: start;
+}
+
+.container .content .image100 {
+  width: 100%;
+  height: auto;
+  align-self: center;
+  margin: 1em 0;
+}
+
+.container .content .image75 {
+  width: 75%;
+  height: auto;
+  align-self: center;
+  margin: 1em 0;
+}
+
+.container .content .image66 {
+  width: 66.67%;
+  height: auto;
+  align-self: center;
+  margin: 1em 0;
+}
+
+.container .content .image50 {
+  width: 50%;
+  height: auto;
+  align-self: center;
+  margin: 1em 0;
+}
+
+.container .content .image33 {
+  width: 33.33%;
+  height: auto;
+  align-self: center;
+  margin: 1em 0;
+}
+
+.container .content .image25 {
+  width: 25%;
+  height: auto;
+  align-self: center;
+  margin: 1em 0;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  font-family: Raleway, sans-serif;
+}
+
+footer p {
+  font-size: 0.75em;
+  padding: 1em;
+  color: white;
+}
+
+#remonter img {
+  height: 3em;
+  position: fixed;
+  right: 5vw;
+  bottom: 5vh;
+}
