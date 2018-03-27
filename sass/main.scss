@@ -39,11 +39,22 @@ $bleu_menu1: (rgb(30, 150, 150));
     flex: 1 1 $taille;
 }
 
+@mixin background-couleur($color, $attach: fixed){
+    background: $color;
+    background-attachment: $attach;
+}
+
+@mixin background-image($url, $size: cover, $repeat: no-repeat){
+    background: url("#{$url}");
+    background-size: $size;
+    background-repeat: $repeat;
+}
+
 //Layout
 
 header{
     position: relative;
-    background-image: url("../media/images/backgroundHeader.jpg");
+    @include background-image("../media/images/backgroundHeader.jpg");
     padding: 2em 0;
     font-family: Stars;
     font-size: 1.5em;
@@ -69,7 +80,7 @@ header{
     width: 100%;
     @extend %user-select-none;
     #courrant{
-        background-color: $bleu_menu1;
+        @include background-couleur($bleu_menu1);
         >a{
             color: #000;
         }
@@ -78,14 +89,14 @@ header{
         display: inline-block;
         position: relative;
         width: 20%;
-        background-color: $bleu_menu;
+        @include background-couleur($bleu_menu);
         &:hover{
-            background-color: $bleu_menu1;
+            @include background-couleur($bleu_menu1);
         }
         li{
-            background-color: $bleu_menu;
+            @include background-couleur($bleu_menu);
             &:hover{
-                background-color: $bleu_menu1;
+                @include background-couleur($bleu_menu1);
             }
         }
         &:hover{
@@ -134,7 +145,7 @@ header{
 }
 
 .container{
-    background-color: rgb(20, 20, 20);
+    @include background-couleur(rgb(20, 20, 20));
     min-height: 100vh;
     justify-content: space-around;
     padding-bottom: 5vh;
@@ -207,13 +218,80 @@ header{
             align-self: flex-start;
             padding-top: 5vmin;
         }
+        .gallerie{
+            display: flex;
+            flex-flow: row;
+            flex-wrap: wrap;
+            @include placement_corps(95%);
+            align-items: center;
+            justify-content: space-around;
+            .survol{
+                flex: 0 0 auto;
+                max-width: 30%;
+                max-height: 50vh;
+                .image{
+                    max-width: 90%;
+                    max-height: 48vh;
+                    transition: .1s transform;
+                    transform: translateZ(0);
+                    padding: 2vh 0;
+                }
+                span{
+                    display: none;
+                }
+            }
+            @media only screen and (min-width: 800px) {
+                .survol:hover{
+                    z-index: 1;
+                    position: relative;
+                    .image{
+                        transform: scale(2,2);
+                        transition: .3s transform;
+                    }
+                    span{
+                        color: black;
+                        font-size: calc(0.6em + 0.5vw);
+                        display: inline;
+                        z-index: 5;
+                        position: absolute;
+                        right: -5vw;
+                        bottom: -7vh;
+                        padding: 2vmin;
+                        border: 2px solid white;
+                        border-radius: 5px;
+                        max-width: 10vw;
+                        @include background-couleur(rgba(255, 255, 255, 0.6));
+                    }
+                }
+            }
+            @media only screen and (max-width: 799px) {
+                .survol{
+                    max-width: 100%;
+                    max-height: 60vh;
+                    position: relative;
+                    span{
+                        color: black;
+                        display: inline;
+                        z-index: 5;
+                        position: absolute;
+                        right: -0.5vw;
+                        bottom: -0.5vh;
+                        padding: 2vmin;
+                        border: 2px solid white;
+                        border-radius: 5px;
+                        max-width: 33vw;
+                        @include background-couleur(rgba(255, 255, 255, 0.6));  
+                    }
+                }
+            }
+        }
     }
 }
 
 footer{
     width: 100%;
     text-align: center;
-    background-color: black;
+    @include background-couleur(black);
     font-family: Raleway, sans-serif;
     p{
         font-size: 0.75em;

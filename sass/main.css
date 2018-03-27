@@ -18,7 +18,9 @@ header, #menu_general {
 
 header {
   position: relative;
-  background-image: url("../media/images/backgroundHeader.jpg");
+  background: url("../media/images/backgroundHeader.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 2em 0;
   font-family: Stars;
   font-size: 1.5em;
@@ -45,7 +47,8 @@ header span {
 }
 
 #menu_general #courrant {
-  background-color: #1e9696;
+  background: #1e9696;
+  background-attachment: fixed;
 }
 
 #menu_general #courrant > a {
@@ -56,19 +59,23 @@ header span {
   display: inline-block;
   position: relative;
   width: 20%;
-  background-color: #1e1996;
+  background: #1e1996;
+  background-attachment: fixed;
 }
 
 #menu_general li:hover {
-  background-color: #1e9696;
+  background: #1e9696;
+  background-attachment: fixed;
 }
 
 #menu_general li li {
-  background-color: #1e1996;
+  background: #1e1996;
+  background-attachment: fixed;
 }
 
 #menu_general li li:hover {
-  background-color: #1e9696;
+  background: #1e9696;
+  background-attachment: fixed;
 }
 
 #menu_general li:hover a {
@@ -119,7 +126,8 @@ header span {
 }
 
 .container {
-  background-color: #141414;
+  background: #141414;
+  background-attachment: fixed;
   min-height: 100vh;
   justify-content: space-around;
   padding-bottom: 5vh;
@@ -234,10 +242,87 @@ header span {
   padding-top: 5vmin;
 }
 
+.container .content .gallerie {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  margin: 2em 2.5%;
+  flex: 1 1 95%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container .content .gallerie .survol {
+  flex: 0 0 auto;
+  max-width: 30%;
+  max-height: 50vh;
+}
+
+.container .content .gallerie .survol .image {
+  max-width: 90%;
+  max-height: 48vh;
+  transition: .1s transform;
+  transform: translateZ(0);
+  padding: 2vh 0;
+}
+
+.container .content .gallerie .survol span {
+  display: none;
+}
+
+@media only screen and (min-width: 800px) {
+  .container .content .gallerie .survol:hover {
+    z-index: 1;
+    position: relative;
+  }
+  .container .content .gallerie .survol:hover .image {
+    transform: scale(2, 2);
+    transition: .3s transform;
+  }
+  .container .content .gallerie .survol:hover span {
+    color: black;
+    font-size: calc(0.6em + 0.5vw);
+    display: inline;
+    z-index: 5;
+    position: absolute;
+    right: -5vw;
+    bottom: -7vh;
+    padding: 2vmin;
+    border: 2px solid white;
+    border-radius: 5px;
+    max-width: 10vw;
+    background: rgba(255, 255, 255, 0.6);
+    background-attachment: fixed;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .container .content .gallerie .survol {
+    max-width: 100%;
+    max-height: 60vh;
+    position: relative;
+  }
+  .container .content .gallerie .survol span {
+    color: black;
+    display: inline;
+    z-index: 5;
+    position: absolute;
+    right: -0.5vw;
+    bottom: -0.5vh;
+    padding: 2vmin;
+    border: 2px solid white;
+    border-radius: 5px;
+    max-width: 33vw;
+    background: rgba(255, 255, 255, 0.6);
+    background-attachment: fixed;
+  }
+}
+
 footer {
   width: 100%;
   text-align: center;
-  background-color: black;
+  background: black;
+  background-attachment: fixed;
   font-family: Raleway, sans-serif;
 }
 
