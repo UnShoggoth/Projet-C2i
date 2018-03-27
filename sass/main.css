@@ -33,8 +33,8 @@ header span {
   color: #afaf00;
   transform: rotate(-25deg);
   font-size: 1rem;
-  right: 5vw;
-  bottom: 10vh;
+  right: 5vmin;
+  bottom: 10vmin;
   font-weight: 600;
 }
 
@@ -143,6 +143,26 @@ header span {
   font-size: 2em;
 }
 
+.container .content h3 {
+  flex: 1 0 95%;
+  margin: 1.5em 2.5%;
+  font-family: Lato, sans-serif;
+  font-size: 1.5em;
+  text-align: start;
+  border-bottom: 2px solid white;
+}
+
+.container .content a {
+  text-decoration: none;
+  color: #32b7e4;
+}
+
+.container .content ul {
+  display: inline;
+  text-decoration: none;
+  text-align: start;
+}
+
 .container .content .colonne1, .container .content .colonne1c {
   margin: 2em 2.5%;
   flex: 1 1 95%;
@@ -171,42 +191,47 @@ header span {
   width: 100%;
   height: auto;
   align-self: center;
-  margin: 1em 0;
+  margin: 1em auto;
 }
 
 .container .content .image75 {
   width: 75%;
   height: auto;
   align-self: center;
-  margin: 1em 0;
+  margin: 1em auto;
 }
 
 .container .content .image66 {
   width: 66.67%;
   height: auto;
   align-self: center;
-  margin: 1em 0;
+  margin: 1em auto;
 }
 
 .container .content .image50 {
   width: 50%;
   height: auto;
   align-self: center;
-  margin: 1em 0;
+  margin: 1em auto;
 }
 
 .container .content .image33 {
   width: 33.33%;
   height: auto;
   align-self: center;
-  margin: 1em 0;
+  margin: 1em auto;
 }
 
 .container .content .image25 {
   width: 25%;
   height: auto;
   align-self: center;
-  margin: 1em 0;
+  margin: 1em auto;
+}
+
+.container .content .enHaut {
+  align-self: flex-start;
+  padding-top: 5vmin;
 }
 
 footer {

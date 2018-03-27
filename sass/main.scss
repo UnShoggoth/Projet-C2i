@@ -31,7 +31,7 @@ $bleu_menu1: (rgb(30, 150, 150));
     width: $width;
     height: $height;
     align-self: center;
-    margin: 1em 0;
+    margin: 1em auto;
 }
 
 @mixin placement_corps($taille){
@@ -57,8 +57,8 @@ header{
         color: rgb(175, 175, 0);
         transform: rotate(-25deg);
         font-size: 1rem;
-        right: 5vw;
-        bottom: 10vh;
+        right: 5vmin;
+        bottom: 10vmin;
         font-weight: 600;
     }
 }
@@ -153,6 +153,23 @@ header{
             font-family: Stars;
             font-size: 2em;
         }
+        h3{
+            flex: 1 0 95%;
+            margin: 1.5em 2.5%;
+            font-family: Lato, sans-serif;
+            font-size: 1.5em;
+            text-align: start;
+            border-bottom: 2px solid white;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(50, 183, 228);
+        }
+        ul{
+            display: inline;
+            text-decoration: none;
+            text-align: start;
+        }
         .colonne1, .colonne1c{
             @include placement_corps(95%)
         }
@@ -185,6 +202,10 @@ header{
         }
         .image25{
             @include image(25%)
+        }
+        .enHaut{
+            align-self: flex-start;
+            padding-top: 5vmin;
         }
     }
 }
