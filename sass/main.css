@@ -294,7 +294,7 @@ header span {
   padding: 2vmin;
   border: 2px solid white;
   border-radius: 5px;
-  max-width: 10em;
+  max-width: 20em;
   background: rgba(255, 255, 255, 0.6);
   background-attachment: fixed;
 }
