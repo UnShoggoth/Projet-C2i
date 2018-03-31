@@ -160,6 +160,15 @@ header span {
   border-bottom: 2px solid white;
 }
 
+.container .content h5 {
+  flex: 1 0 95%;
+  margin: 0.5em 2.5%;
+  font-family: Lato, sans-serif;
+  font-size: 1.1em;
+  text-align: start;
+  font-style: italic;
+}
+
 .container .content a {
   text-decoration: none;
   color: #32b7e4;
