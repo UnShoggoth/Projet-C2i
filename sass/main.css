@@ -184,6 +184,10 @@ header span {
   list-style-type: disclosure-closed;
 }
 
+.container .content .petit {
+  font-size: 0.8em;
+}
+
 .container .content .colonne1, .container .content .colonne1c {
   margin: 2em 2.5%;
   flex: 1 1 95%;

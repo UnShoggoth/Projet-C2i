@@ -192,6 +192,9 @@ header{
                 list-style-type: disclosure-closed;
             }
         }
+        .petit{
+            font-size: 0.8em;
+        }
         .colonne1, .colonne1c{
             @include placement_corps(95%)
         }
