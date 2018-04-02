@@ -130,7 +130,7 @@ header span {
   background-attachment: fixed;
   min-height: 100vh;
   justify-content: space-around;
-  padding-bottom: 5vh;
+  padding-bottom: 10vh;
 }
 
 .container .content {
