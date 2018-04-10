@@ -52,7 +52,7 @@ $bleu_menu1: (rgb(30, 150, 150));
 
 //Layout
 
-header{
+header{         /*titre en haut*/
     position: relative;
     @include background-image("../media/images/backgroundHeader.jpg");
     padding: 2em 0;
@@ -62,7 +62,7 @@ header{
     color: $bleu_menu1;
     text-transform: capitalize;
     @extend %user-select-none;
-    span{
+    span{       /*flavor text*/
         text-transform: none;
         position: absolute;
         color: rgb(175, 175, 0);
@@ -74,7 +74,7 @@ header{
     }
 }
 
-#menu_general{
+#menu_general{      /*Menu déroulant*/
     list-style: none;
     text-align: center;
     width: 100%;
@@ -112,14 +112,14 @@ header{
                 }
             }
             ul{
-                max-height: 20em;
+                max-height: 20em;       /*afficher les options déroulantes si hover*/
             }
         }
     }
     ul{
         position: absolute;
         z-index: 10;
-        max-height: 0;
+        max-height: 0;      /*cacher les options déroulantes si !hover*/
         left: 0;
         right: 0;
         overflow: hidden;
@@ -158,13 +158,13 @@ header{
         text-align: center;
         color: white;
         font-family: Raleway, sans-serif;
-        h1{
+        h1{     /*gros titre en haut*/
             flex: 1 0 95%;
             margin: 2em 2.5%;
             font-family: Stars;
             font-size: 2em;
         }
-        h3{
+        h3{     /*sections*/
             flex: 1 0 95%;
             margin: 1.5em 2.5%;
             font-family: Lato, sans-serif;
@@ -172,7 +172,7 @@ header{
             text-align: start;
             border-bottom: 2px solid white;
         }
-        h5{
+        h5{     /*sous-sections*/
             flex: 1 0 95%;
             margin: 0.5em 2.5%;
             font-family: Lato, sans-serif;
@@ -208,7 +208,7 @@ header{
             @include placement_corps(20%)
         }
         .colonne1, .colonne2, .colonne3, .colonne4{
-            text-align: start;
+            text-align: justify;
         }
         .image100{
             @include image(100%)
