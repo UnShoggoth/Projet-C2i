@@ -51,8 +51,8 @@ $bleu_menu1: (rgb(30, 150, 150));
 }
 
 //Layout
-
-header{         /*titre en haut*/
+/*titre en haut*/
+header{
     position: relative;
     @include background-image("../media/images/backgroundHeader.jpg");
     padding: 2em 0;
@@ -62,19 +62,20 @@ header{         /*titre en haut*/
     color: $bleu_menu1;
     text-transform: capitalize;
     @extend %user-select-none;
-    span{       /*flavor text*/
+    /*flavor text*/
+    span{
         text-transform: none;
         position: absolute;
         color: rgb(175, 175, 0);
         transform: rotate(-25deg);
         font-size: 1rem;
-        right: 5vmin;
-        bottom: 10vmin;
+        right: 3em;
+        bottom: 4em;
         font-weight: 600;
     }
 }
-
-#menu_general{      /*Menu déroulant*/
+/*Menu déroulant*/
+#menu_general{
     list-style: none;
     text-align: center;
     width: 100%;
@@ -112,14 +113,16 @@ header{         /*titre en haut*/
                 }
             }
             ul{
-                max-height: 20em;       /*afficher les options déroulantes si hover*/
+                /*afficher les options déroulantes si hover*/
+                max-height: 20em;
             }
         }
     }
     ul{
         position: absolute;
         z-index: 10;
-        max-height: 0;      /*cacher les options déroulantes si !hover*/
+        /*cacher les options déroulantes si !hover*/
+        max-height: 0;
         left: 0;
         right: 0;
         overflow: hidden;
@@ -158,13 +161,15 @@ header{         /*titre en haut*/
         text-align: center;
         color: white;
         font-family: Raleway, sans-serif;
-        h1{     /*gros titre en haut*/
+        /*gros titre en haut*/
+        h1{
             flex: 1 0 95%;
             margin: 2em 2.5%;
             font-family: Stars;
             font-size: 2em;
         }
-        h3{     /*sections*/
+        /*sections*/
+        h3{
             flex: 1 0 95%;
             margin: 1.5em 2.5%;
             font-family: Lato, sans-serif;
@@ -172,7 +177,8 @@ header{         /*titre en haut*/
             text-align: start;
             border-bottom: 2px solid white;
         }
-        h5{     /*sous-sections*/
+        /*sous-sections*/
+        h5{
             flex: 1 0 95%;
             margin: 0.5em 2.5%;
             font-family: Lato, sans-serif;
@@ -180,10 +186,12 @@ header{         /*titre en haut*/
             text-align: start;
             font-style: italic;
         }
+        /*liens*/
         a{
             text-decoration: none;
             color: rgb(50, 183, 228);
         }
+        /*listes*/
         ul{
             display: inline;
             text-decoration: none;
@@ -192,6 +200,7 @@ header{         /*titre en haut*/
                 list-style-type: disclosure-closed;
             }
         }
+        /*classes pour les paragraphes*/
         .petit{
             font-size: 0.8em;
         }
@@ -210,6 +219,7 @@ header{         /*titre en haut*/
         .colonne1, .colonne2, .colonne3, .colonne4{
             text-align: justify;
         }
+        /*classes pour les images*/
         .image100{
             @include image(100%)
         }
@@ -258,9 +268,11 @@ header{         /*titre en haut*/
                 z-index: 1;
                 position: relative;
                 .image{
+                    /*zoom quand survol*/
                     transform: scale(2,2);
                     transition: .3s transform;
                 }
+                /*légende*/
                 span{
                     color: black;
                     display: inline;
@@ -274,6 +286,7 @@ header{         /*titre en haut*/
                     max-width: 20em;
                     @include background-couleur(rgba(255, 255, 255, 0.6));
                     @extend %user-select-none;
+                    /*masquer la légende quand survol*/
                     &:hover{
                         opacity: 0;
                     }
